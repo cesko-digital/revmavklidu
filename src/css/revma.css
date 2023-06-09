@@ -1,0 +1,115 @@
+.button-wide a {
+  min-width: 200px;
+}
+
+.h-750 {
+  min-height: 750px;
+}
+
+body.elementor-editor-active .step {
+  display: block !important;
+}
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+
+.survey-step-header,
+h2.survey-step-header {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #6b6969 !important;
+  margin-bottom: 23px;
+}
+
+.survey .elementor-field-label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+  letter-spacing: 0.4px;
+
+  color: #6b6969;
+}
+
+.survey .elementor-field-subgroup {
+  display: flex;
+}
+
+.survey .e-form__buttons {
+  position: absolute;
+  bottom: -100px;
+}
+
+.survey .elementor-field-type-step {
+  align-content: center;
+}
+
+.survey .elementor-field-type-radio label {
+  margin-bottom: 25px;
+}
+.survey .elementor-field-option {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.survey .elementor-field-option input[type="radio"] {
+  display: none !important;
+}
+
+.survey .elementor-field-type-previous button {
+  background: rgba(31, 161, 56, 0.08);
+  border-radius: 50px;
+  text-align: center;
+  letter-spacing: 0.6px;
+
+  color: #1fa138 !important;
+}
+
+.survey .elementor-field-option label {
+  display: block !important;
+  padding: 26px 20px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 36px;
+  transition: all 0.3s ease;
+  text-align: center;
+
+  /* Font */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.4px;
+
+  color: #363937;
+}
+
+.survey .elementor-field-option label:hover {
+  background-color: #f5f5f5;
+}
+
+.survey .elementor-field-option input[type="radio"]:checked + label {
+  background-color: black;
+  color: white;
+}
+
+.disabled {
+  background-color: #f0f0f0 !important;
+  color: #747474 !important;
+}
