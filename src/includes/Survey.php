@@ -20,6 +20,8 @@ class Survey
         add_action('user_register', [$this, 'assign_survey_to_user']);
         add_filter('lifterlms_user_can_access', [$this, 'check_user_survey_completion'], 10, 3);
         add_action('your_survey_tool_form_submission_hook', [$this, 'mark_survey_as_completed'], 10, 2);
+        add_action('elementor_pro/forms/new_record', [$this, 'process_survey_submit'], 10, 2);
+
     }
 
     public function assign_survey_to_user($user_id)
@@ -61,4 +63,24 @@ class Survey
         exit;
     }
 
+    public function process_survey_submit($record, $handler)
+    {
+        // get the submitted form data
+        $raw_fields = $record->get('fields');
+
+        $form_name = $record->get_form_settings('form_name');
+
+        // check if it is the right form
+        if ('HAQ' !== $form_name) {
+            return;
+        }
+
+        // get current user ID
+        $user_id = get_current_user_id();
+
+        // update ACF field
+        $field_key = "survey_to_complete";
+        $value = 0;
+        update_field($field_key, $value, 'user_' . $user_id);
+    }
 }
