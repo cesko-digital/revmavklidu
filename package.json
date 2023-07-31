@@ -1,0 +1,10 @@
+{
+  "name": "revma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Martin Starosta",
+  "license": "MIT",
+  "scripts": {
+    "bundle": "./make-zip.sh"
+  }
+}
