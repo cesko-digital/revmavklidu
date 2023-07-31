@@ -1,0 +1,16 @@
+{
+    "name": "martinstarosta/revmavklidu",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Martinstarosta\\Revmavklidu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Martin Starosta",
+            "email": "martin.starosta@labzone.tech"
+        }
+    ],
+    "require": {}
+}

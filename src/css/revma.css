@@ -1,0 +1,239 @@
+:root {
+  --dark-green: #1FA138;
+  --light-green: #1FA13814;
+  --white-text: white;
+  --grey-text: #6b6969;
+  --black-text: #000000D1;
+  --active-buttons: linear-gradient(90deg, #363937 0%, #004D7C 100%);
+}
+
+.button-wide a {
+  min-width: 200px;
+}
+
+.h-735 .elementor-widget-wrap {
+  height: 735px !important;
+}
+
+.elementor-widget-wrap .elementor-progress-wrapper {
+  background-color: var(--white-text) !important;
+}
+
+.elementor-widget-progress {
+  margin-top: 5px;
+  margin-bottom: 0px !important;
+}
+
+.elementor-widget-container {
+  margin: 0 !important;
+}
+
+.survey-header p {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--grey-text);
+}
+
+.elementor-element-bac535d {
+  margin-top: 40px !important;
+}
+
+.survey-header {
+  width: 302px;
+  height: 42px;
+  margin-bottom: 0px !important;
+  margin-top: 40px !important;
+}
+
+.survey-text p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: var(--black-text);
+  width: 292px;
+  height: 80px;
+}
+
+.survey-text {
+  padding: 0 32px;
+  margin-bottom: 102px !important;
+}
+
+.elementor-icon-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.elementor-icon svg {
+  width: 133.82px !important;
+  height: 197px !important;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.elementor-heading-title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: center;
+  margin-bottom: 20px !important;
+}
+
+.survey-bold-text {
+  font-weight: 700;
+}
+
+.elementor-element-2d2bcf5 {
+  margin: 175px 34px;
+}
+
+.button-wide .next {
+  width: 203px !important;
+  margin-right: 15px !important;
+}
+
+.button-start {
+  margin-top: 311px !important;
+  margin-left: 6px !important;
+  margin-right: 15px !important;
+}
+
+.back {
+  width: 116px !important;
+  margin-left: 15px !important;
+  margin-right: 0px !important;
+  margin-top: 311px !important;
+}
+
+.four-percent .elementor-progress-bar {
+  background-color: var(--dark-green) !important;
+  border-radius: 18%;
+  width: 10% !important;
+}
+
+.elementor-element-e5b3a54 .elementor-element-populated {
+  padding: 10px !important;
+}
+
+body.elementor-editor-active .step {
+  display: block !important;
+}
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+.survey-step-header,
+h2.survey-step-header {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--grey-text) !important;
+  margin-bottom: 23 px;
+}
+
+.survey .elementor-field-label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: var(--grey-text);
+}
+
+.survey .elementor-field-subgroup {
+  display: flex;
+}
+
+.survey .e-form__buttons {
+  position: absolute;
+  bottom: -100px;
+}
+
+.survey .elementor-field-type-step {
+  align-content: center;
+}
+
+.survey .elementor-field-type-radio label {
+  margin-bottom: 25px;
+}
+
+.survey .elementor-field-type-checkbox.elementor-field-group label {
+  margin-bottom: 25px;
+}
+
+.survey .elementor-field-option {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.survey .elementor-field-subgroup {
+  gap: 25px;
+}
+
+.survey .elementor-field-option input[type="radio"],
+.survey .elementor-field-option input[type="checkbox"] {
+  display: none !important;
+}
+
+.survey .elementor-field-type-previous button {
+  background: var(--light-green);
+  border-radius: 50px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  color: var(--dark-green) !important;
+}
+
+.survey .elementor-field-option label {
+  display: block !important;
+  padding: 26px 20px;
+  cursor: pointer;
+  background-color: var(--white-text);
+  border: 1px solid var(--black-text);
+  border-radius: 36px;
+  transition: all 0.3s ease;
+  text-align: center;
+  /* Font */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: var(--grey-text);
+}
+
+.survey .elementor-field-option label:hover {
+  background-color: var(--white-text);
+}
+
+.survey .elementor-field-option input[type="radio"]:checked+label,
+.survey .elementor-field-option input[type="checkbox"]:checked+label {
+  background: var(--active-buttons);
+  color: var(--white-text);
+}
+
+.disabled {
+  background-color: #f0f0f0 !important;
+  color: #747474 !important;
+}
