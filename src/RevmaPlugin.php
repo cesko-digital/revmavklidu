@@ -28,13 +28,6 @@ class RevmaPlugin
             array(),
             filemtime(plugin_dir_path(__FILE__) . 'css/revma.css')
         );
-        wp_enqueue_style(
-            'revma-tailwind-css',
-            plugins_url('/css/tailwind.css', __FILE__),
-            array(),
-            filemtime(plugin_dir_path(__FILE__) . 'css/tailwind.css')
-        );
-
         wp_enqueue_script(
             'revma-custom-js',
             plugins_url('/js/revma.js', __FILE__),

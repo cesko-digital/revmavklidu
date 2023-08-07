@@ -72,6 +72,7 @@ h2.survey-step-header {
 
 .survey .elementor-field-option input[type="radio"],
 .survey .elementor-field-option input[type="checkbox"] {
+.survey .elementor-field-option input[type="radio"] {
   display: none !important;
 }
 
@@ -115,6 +116,7 @@ h2.survey-step-header {
 
 .survey .elementor-field-option input[type="radio"]:checked + label,
 .survey .elementor-field-option input[type="checkbox"]:checked + label {
+.survey .elementor-field-option input[type="radio"]:checked + label {
   background-color: black;
   color: white;
 }
