@@ -19,7 +19,6 @@ class Survey
         add_action('template_redirect', [$this, 'redirect_user_if_survey_not_completed']);
         add_action('user_register', [$this, 'assign_survey_to_user']);
         add_filter('lifterlms_user_can_access', [$this, 'check_user_survey_completion'], 10, 3);
-        add_action('your_survey_tool_form_submission_hook', [$this, 'mark_survey_as_completed'], 10, 2);
         add_action('elementor_pro/forms/new_record', [$this, 'process_survey_submit'], 10, 2);
 
     }
@@ -27,15 +26,6 @@ class Survey
     public function assign_survey_to_user($user_id)
     {
         // your survey assignment logic here
-    }
-
-    public function mark_survey_as_completed($entry, $form)
-    {
-        // Check that it's the correct form
-        if ($form['id'] == 'your_form_id') {
-            // Mark the survey as completed
-            update_user_meta($this->_user->ID, self::SURVEY_TO_COMPLETE_META_KEY, self::SURVEY_POST_ID);
-        }
     }
 
     public function redirect_user_if_survey_not_completed()

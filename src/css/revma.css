@@ -1,10 +1,14 @@
 :root {
-  --dark-green: #1FA138;
-  --light-green: #1FA13814;
+  --white: #fff;
+  --black: #000;
+  --green1: #1fa138;
+  --green-2: #edf7f4;
+  --dark-green: #1fa138;
+  --light-green: #1fa13814;
   --white-text: white;
   --grey-text: #6b6969;
-  --black-text: #000000D1;
-  --active-buttons: linear-gradient(90deg, #363937 0%, #004D7C 100%);
+  --black-text: #000000d1;
+  --active-buttons: linear-gradient(90deg, #363937 0%, #004d7c 100%);
 }
 
 .button-wide a {
@@ -76,15 +80,6 @@
   height: 197px !important;
   margin-top: 20px;
   margin-bottom: 100px;
-}
-
-.elementor-heading-title {
-  font-family: Inter;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 29px;
-  text-align: center;
-  margin-bottom: 20px !important;
 }
 
 .survey-bold-text {
@@ -227,8 +222,8 @@ h2.survey-step-header {
   background-color: var(--white-text);
 }
 
-.survey .elementor-field-option input[type="radio"]:checked+label,
-.survey .elementor-field-option input[type="checkbox"]:checked+label {
+.survey .elementor-field-option input[type="radio"]:checked + label,
+.survey .elementor-field-option input[type="checkbox"]:checked + label {
   background: var(--active-buttons);
   color: var(--white-text);
 }
@@ -236,4 +231,94 @@ h2.survey-step-header {
 .disabled {
   background-color: #f0f0f0 !important;
   color: #747474 !important;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 24px;
+  border-radius: 8px;
+  border: 2px solid var(--green-2, #edf7f4);
+  background: var(--white, #fff);
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content .modal-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.modal-content .close-modal {
+  display: flex;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+  border: 2px solid #747474;
+  border-radius: 4px;
+  color: #747474;
+  cursor: pointer;
+}
+
+.modal-content .title {
+  color: var(--black, #000);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 400;
+
+  flex-grow: 1;
+}
+
+.modal-content textarea {
+  border-radius: 8px;
+  border: 2px solid var(--green-2, #edf7f4);
+  background: var(--white, #fff);
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-content .buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.modal-content .buttons button {
+  padding: 14px 20px;
+}
+
+.modal-content .buttons button.secondary {
+  background-color: var(--green-2, #edf7f4);
+  color: var(--green1, #1fa138);
+}
+
+/** Login Page **/
+.login-form button[type="submit"] {
+  margin-top: 32px;
+  width: 100%;
 }
