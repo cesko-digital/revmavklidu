@@ -1,11 +1,13 @@
 <?php
 namespace Revma;
 
+use Revma\Registration;
 use Revma\Survey;
 
 class RevmaPlugin
 {
     private $_survey;
+    private $_registration;
 
     public function __construct()
     {
@@ -18,6 +20,9 @@ class RevmaPlugin
         $current_user = wp_get_current_user();
         $this->_survey = new Survey($current_user);
         $this->_survey->init();
+
+        $this->_registration = new Registration();
+        $this->_registration->init();
     }
 
     public function add_custom_assets()

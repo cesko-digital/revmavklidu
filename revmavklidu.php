@@ -7,6 +7,7 @@
  */
 require_once plugin_dir_path(__FILE__) . 'src/RevmaPlugin.php';
 require_once plugin_dir_path(__FILE__) . 'src/includes/Survey.php';
+require_once plugin_dir_path(__FILE__) . 'src/includes/Registration.php';
 
 use Revma\RevmaPlugin;
 

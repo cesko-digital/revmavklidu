@@ -53,6 +53,7 @@ class Survey
         exit;
     }
 
+    //TODO: Extract function to handle all forms submissions
     public function process_survey_submit($record, $handler)
     {
         // get the submitted form data
@@ -60,13 +61,34 @@ class Survey
 
         $form_name = $record->get_form_settings('form_name');
 
+        // get current user ID
+        $user_id = get_current_user_id();
+
+        if ('Registrace_lokalita' === $form_name) {
+            $personal = get_field('osobne_informacie', 'user_' . $user_id, true);
+
+            $rok_narodenia_value = $raw_fields['narodenie']['value'];
+            $personal['rok_narodenia'] = $rok_narodenia_value ? $rok_narodenia_value : 0;
+
+            $lokalita_value = $raw_fields['lokalita']['value'];
+            $personal['lokalita'] = $lokalita_value ? $lokalita_value : '';
+
+            update_field('osobne_informacie', $personal, 'user_' . $user_id);
+            //TODO: Need to make mapping for values
+            //update_user_meta($user_id, 'llms_billing_state', $lokalita_value);
+
+            if (isset($raw_fields['telephone']['value'])) {
+                $phone_value = $raw_fields['telephone']['value'];
+                update_user_meta($user_id, 'llms_phone', $phone_value);
+            }
+
+            return;
+        }
+
         // check if it is the right form
         if ('HAQ' !== $form_name) {
             return;
         }
-
-        // get current user ID
-        $user_id = get_current_user_id();
 
         // update ACF field
         $field_key = "survey_to_complete";
